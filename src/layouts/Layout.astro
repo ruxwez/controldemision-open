@@ -1,4 +1,11 @@
 ---
+import "@fontsource-variable/inter";
+import inter from "@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url";
+
+import { ClientRouter } from "astro:transitions";
+
+import TopBar from "../components/topbar.astro";
+import Navbar from "../components/navbar.astro";
 import "../global.css";
 ---
 
@@ -8,9 +15,13 @@ import "../global.css";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preload" type="font/woff2" as="font" href={inter} crossorigin />
+    <ClientRouter />
     <title>Control de mision - Open Source</title>
   </head>
   <body>
+    <TopBar />
+    <Navbar />
     <slot />
   </body>
 </html>

@@ -1,6 +1,40 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import { RiYoutubeFill } from "@remixicon/react";
+import ScreenWhite from "../components/_dev/screen-white.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
+  <header class="w-full bg-(image:--bg-header) bg-cover bg-center -mt-20">
+    <div class="container h-dvh flex justify-center items-center">
+      <div
+        class="flex flex-col justify-center items-center text-center text-blue-100 -mt-32 max-w-4xl"
+      >
+        <span class="text-md uppercase">Control de misión</span>
+        <h1 class="text-5xl font-black my-4 uppercase text-white">
+          La mejor comunidad espacial hispanohablante
+        </h1>
+        <p class="font-light max-w-2xl">
+          Descubre lo último en la exploración del espacio y sus misterios. En
+          Control de Misión, te mantenemos al día con noticias y avances sobre
+          el vasto universo. ¡Acompáñanos en esta aventura cósmica!
+        </p>
+        <div class="flex justify-center items-center gap-6 mt-8">
+          <a
+            class="flex items-center bg-neutral-50 text-neutral-950 px-4 pr-5 py-2 gap-2 rounded-full"
+            href="/"
+          >
+            <RiYoutubeFill />
+            Canal de youtube
+          </a>
+          <a class="text-white" href="/"> Hazte miembro </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <ScreenWhite />
+  <ScreenWhite />
+  <ScreenWhite />
+  <ScreenWhite />
+  <ScreenWhite />
 </Layout>

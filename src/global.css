@@ -1,1 +1,18 @@
 @import "tailwindcss";
+
+:root {
+  --bg-header: linear-gradient(
+      0deg,
+      color-mix(in oklab, var(--color-blue-900) 50%, transparent),
+      var(--color-blue-950)
+    ),
+    url("/img/pexels-felixmittermeier-957085.webp");
+}
+
+@utility container {
+  @apply max-w-[1380px] mx-auto w-full px-5;
+}
+
+body {
+  font-family: "Inter Variable", sans-serif;
+}

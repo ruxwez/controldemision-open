@@ -9,8 +9,18 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/react": "^4.2.1",
+    "@fontsource-variable/inter": "^5.2.5",
+    "@remixicon/react": "^4.6.0",
     "@tailwindcss/vite": "^4.0.15",
+    "@types/react": "^19.0.12",
+    "@types/react-dom": "^19.0.4",
     "astro": "^5.5.4",
+    "clsx": "^2.1.1",
+    "motion": "^12.5.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^3.0.2",
     "tailwindcss": "^4.0.15"
   }
 }

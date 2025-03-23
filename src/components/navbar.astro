@@ -1,0 +1,47 @@
+---
+
+---
+
+<div class="w-full sticky top-0 left-0 z-50">
+  <span
+    id="backgroundNavbar"
+    class="w-full h-0 bg-blue-950/70 backdrop-blur-lg absolute top-0 left-0 z-30"></span>
+  <div
+    class="container h-20 py-2 flex items-center justify-between relative z-40"
+  >
+    <a class="h-full flex items-center justify-center" href="/">
+      <img
+        src="/logo.webp"
+        class="h-full aspect-square"
+        alt="Logo de control de mision"
+      />
+    </a>
+    <nav class="flex items-center gap-6 text-neutral-100">
+      <a href="/"> Lanzamientos </a>
+      <a href="/"> Merchandising </a>
+      <a href="/"> Sobre CDM </a>
+    </nav>
+  </div>
+</div>
+
+<script>
+  import { scroll, animate } from "motion";
+  var showBackground = false;
+  document.addEventListener("astro:page-load", () => {
+    const backgroundNavbar = document.getElementById(
+      "backgroundNavbar"
+    ) as HTMLSpanElement;
+
+    scroll(() => {
+      if (window.scrollY >= 200) {
+        if (showBackground) return;
+        showBackground = true;
+        animate(backgroundNavbar, { height: "100%" });
+      } else {
+        if(!showBackground) return;
+        showBackground = false;
+        animate(backgroundNavbar, { height: "0" }, {duration: 0.1});
+      }
+    });
+  });
+</script>
