@@ -11,7 +11,9 @@ import Layout from "../layouts/Layout.astro";
         class="flex flex-col justify-center items-center text-center text-blue-50 sm:-mt-28 max-w-4xl"
       >
         <span class="text-md uppercase max-sm:text-sm">Control de misión</span>
-        <h1 class="text-5xl font-black my-4 uppercase text-white max-sm:text-2xl">
+        <h1
+          class="text-5xl font-black my-4 uppercase text-white max-sm:text-2xl"
+        >
           La mejor comunidad espacial hispanohablante
         </h1>
         <p class="font-light max-w-2xl max-sm:text-sm">
@@ -19,7 +21,9 @@ import Layout from "../layouts/Layout.astro";
           Control de Misión, te mantenemos al día con noticias y avances sobre
           el vasto universo. ¡Acompáñanos en esta aventura cósmica!
         </p>
-        <div class="flex justify-center items-center gap-6 mt-8 max-sm:flex-col">
+        <div
+          class="flex justify-center items-center gap-6 mt-8 max-sm:flex-col"
+        >
           <a
             class="flex items-center bg-neutral-50 text-neutral-950 px-4 pr-5 py-2 gap-2 rounded-full"
             href="/"
@@ -33,11 +37,13 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </header>
   <section class="bg-gradient-to-b from-blue-950 to-blue-900 w-full">
-    <div class="container pb-40 pt-10 text-blue-50 flex flex-col items-center">
-      <h2 class="text-3xl font-bold text-center">Ultimos videos de youtube</h2>
-      <div class="grid grid-cols-4 max-xl:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-4 my-10">
+    <div class="container pt-10 text-blue-50 flex flex-col items-center">
+      <h2 class="text-3xl font-bold text-center mb-5">Ultimos videos de youtube</h2>
+      <div
+        class="grid grid-cols-4 max-xl:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-4 my-10"
+      >
         {
-          new Array(8).fill("").map((_, i) => (
+          new Array(12).fill("").map((_, i) => (
             <a
               href="http://"
               target="_blank"
@@ -72,6 +78,67 @@ import Layout from "../layouts/Layout.astro";
       >
         Ver más
       </a>
+    </div>
+  </section>
+  <span class="-mb-40 flex w-full items-center justify-center -z-10 relative">
+    <img
+      class="aspect-square w-xl opacity-20"
+      src="/img/DIAGRAMA-LUNA.webp"
+      alt=""
+    />
+  </span>
+  <section>
+    <div class="container text-blue-50 flex flex-col items-center text-center">
+      <h2 class="text-3xl font-bold">Merchandising oficial</h2>
+      <p>Descubre el merchandising oficial del canal</p>
+  
+      <div
+        class="grid grid-cols-4 max-xl:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-4 my-10"
+      >
+        <a class="group" href="/">
+          <img
+            class="max-w-50 rounded-lg"
+            src="/img/products/54be4cc2-5722-491d-80ec-581f4fd97b13.webp"
+            alt=""
+          />
+          <h3 class="mt-4 text-sm font-bold">Llavero CDM Edición Roja</h3>
+          <p class="text-sm">€7.53</p>
+        </a>
+        <a class="group" href="/">
+          <img
+            class="max-w-50 rounded-lg"
+            src="/img/products/76b4623e-6527-4df5-b4a9-df2e7cdd72c0.webp"
+            alt=""
+          />
+          <h3 class="mt-4 text-sm font-bold">Llavero CDM Edición Roja</h3>
+          <p class="text-sm">€7.53</p>
+        </a>
+        <a class="group" href="/">
+          <img
+            class="max-w-50 rounded-lg"
+            src="/img/products/54be4cc2-5722-491d-80ec-581f4fd97b13.webp"
+            alt=""
+          />
+          <h3 class="mt-4 text-sm font-bold">Llavero CDM Edición Roja</h3>
+          <p class="text-sm">€7.53</p>
+        </a>
+        <a class="group" href="/">
+          <img
+            class="max-w-50 rounded-lg"
+            src="/img/products/76b4623e-6527-4df5-b4a9-df2e7cdd72c0.webp"
+            alt=""
+          />
+          <h3 class="mt-4 text-sm font-bold">Llavero CDM Edición Roja</h3>
+          <p class="text-sm">€7.53</p>
+        </a>
+      </div>
+      <a
+      class="flex items-center bg-neutral-50 text-neutral-950 px-5 py-2 text-sm gap-2 rounded-full mt-5"
+      href="/videos"
+    >
+      Ver más productos
+    </a>
+
     </div>
   </section>
   <ScreenWhite />
