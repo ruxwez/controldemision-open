@@ -24,7 +24,9 @@ import { RiMenu2Fill, RiMenu3Fill } from "@remixicon/react";
       <a href="/"> Merchandising </a>
       <a href="/"> Sobre CDM </a>
     </nav>
-    <button class="text-blue-50 cursor-pointer hover:scale-120 transition-transform sm:hidden">
+    <button
+      class="text-blue-50 cursor-pointer hover:scale-120 transition-transform sm:hidden"
+    >
       <RiMenu3Fill />
     </button>
   </div>
@@ -33,8 +35,9 @@ import { RiMenu2Fill, RiMenu3Fill } from "@remixicon/react";
 <script>
   import { scroll, animate } from "motion";
 
-  var showBackground = false;
   document.addEventListener("astro:page-load", () => {
+    var showBackground = false;
+
     const backgroundNavbar = document.getElementById(
       "backgroundNavbar"
     ) as HTMLSpanElement;
@@ -43,13 +46,17 @@ import { RiMenu2Fill, RiMenu3Fill } from "@remixicon/react";
       if (window.scrollY >= 200) {
         if (showBackground) return;
         showBackground = true;
-        animate(backgroundNavbar, {
-          height: ["0%", "124%", "100%"],
-          transform: ["skewY(0deg)", "skewY(-1deg)", "skewY(0deg)"],
-          top: [0, "-24%", 0],
-        }, {
-          duration: .5
-        });
+        animate(
+          backgroundNavbar,
+          {
+            height: ["0%", "124%", "100%"],
+            transform: ["skewY(0deg)", "skewY(-1deg)", "skewY(0deg)"],
+            top: [0, "-24%", 0],
+          },
+          {
+            duration: 0.5,
+          }
+        );
       } else {
         if (!showBackground) return;
         showBackground = false;

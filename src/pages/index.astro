@@ -1,5 +1,5 @@
 ---
-import { RiYoutubeFill } from "@remixicon/react";
+import { RiPlayFill, RiYoutubeFill } from "@remixicon/react";
 import ScreenWhite from "../components/_dev/screen-white.astro";
 import Layout from "../layouts/Layout.astro";
 ---
@@ -33,8 +33,38 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </header>
   <section class="bg-gradient-to-b from-blue-950 to-blue-900 w-full">
-    <div class="container h-dvh">
+    <div class="container py-40 text-blue-50 flex flex-col items-center">
+      <h2 class="text-3xl font-bold text-center">Ultimos videos de youtube</h2>
+      <div class="grid grid-cols-4 gap-4 my-10">
+        {
+          new Array(8).fill("").map((_, i) => (
+            <a
+              href="http://"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="overflow-hidden relative flex rounded-lg group"
+            >
+              <RiPlayFill className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-10 opacity-0 transition-opacity group-hover:opacity-100 z-10" />
 
+              <img
+                src={
+                  i % 2 == 0
+                    ? "https://i.ytimg.com/vi/PByD4WKzREI/mqdefault.jpg"
+                    : "https://i.ytimg.com/vi/hUzFEQ0_lIU/mqdefault.jpg"
+                }
+                class="w-full h-full transition-all group-hover:brightness-50"
+                alt=""
+              />
+            </a>
+          ))
+        }
+      </div>
+      <a
+        class="flex items-center bg-neutral-50 text-neutral-950 px-5 py-2 text-sm gap-2 rounded-full"
+        href="/videos"
+      >
+        Ver más
+      </a>
     </div>
   </section>
   <ScreenWhite />
