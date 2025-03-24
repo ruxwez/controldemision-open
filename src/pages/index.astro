@@ -42,17 +42,24 @@ import Layout from "../layouts/Layout.astro";
               href="http://"
               target="_blank"
               rel="noopener noreferrer"
-              class="overflow-hidden relative flex rounded-lg group"
+              class="relative flex group hover:scale-95 transition-transform"
             >
-              <RiPlayFill className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-10 opacity-0 transition-opacity group-hover:opacity-100 z-10" />
-
               <img
                 src={
                   i % 2 == 0
                     ? "https://i.ytimg.com/vi/PByD4WKzREI/mqdefault.jpg"
                     : "https://i.ytimg.com/vi/hUzFEQ0_lIU/mqdefault.jpg"
                 }
-                class="w-full h-full transition-all group-hover:brightness-50"
+                class="w-full h-full rounded-lg z-10"
+                alt=""
+              />
+              <img
+                src={
+                  i % 2 == 0
+                    ? "https://i.ytimg.com/vi/PByD4WKzREI/mqdefault.jpg"
+                    : "https://i.ytimg.com/vi/hUzFEQ0_lIU/mqdefault.jpg"
+                }
+                class="w-full h-full absolute top-0 left-0 rounded-lg transition-[filter] group-hover:blur-xl"
                 alt=""
               />
             </a>
