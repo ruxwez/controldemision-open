@@ -6,9 +6,9 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout>
   <header class="w-full bg-(image:--bg-header) bg-cover bg-center -mt-20">
-    <div class="container h-dvh flex justify-center items-center">
+    <div class="container h-screen flex justify-center items-center">
       <div
-        class="flex flex-col justify-center items-center text-center text-blue-50 sm:-mt-28 max-w-4xl"
+        class="flex flex-col justify-center items-center text-center text-blue-50 -mt-28 max-w-4xl"
       >
         <span class="text-md uppercase max-sm:text-sm">Control de misión</span>
         <h1
@@ -40,10 +40,10 @@ import Layout from "../layouts/Layout.astro";
     <div class="container pt-10 text-blue-50 flex flex-col items-center">
       <h2 class="text-3xl font-bold text-center mb-5">Ultimos videos de youtube</h2>
       <div
-        class="grid grid-cols-4 max-xl:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-4 my-10"
+        class="grid grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-4 my-10"
       >
         {
-          new Array(12).fill("").map((_, i) => (
+          new Array(6).fill("").map((_, i) => (
             <a
               href="http://"
               target="_blank"
